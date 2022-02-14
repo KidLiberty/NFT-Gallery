@@ -69,7 +69,8 @@ img {
 .photo-id-container {
   width: 15px;
   position: absolute;
-  right: 45px;
+  top: 1px;
+  right: 40px;
 }
 
 .photo-id {

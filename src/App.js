@@ -5,6 +5,7 @@ export default function App() {
   const [gallery, setGallery] = useState([])
   const [savedGallery, setSavedGallery] = useState([])
   const [id, setId] = useState(0)
+  const [photoNumber, setPhotoNumber] = useState('1')
 
   function savePhotos() {
     let newGallery = gallery.map(image => ({ ...image, isLoading: true }))
@@ -20,17 +21,30 @@ export default function App() {
     setGallery([])
   }
 
+  function getRandomInt(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min) + min)
+  }
+
   return (
     <div>
-      <div className='title'>Photo Gallery v1.0</div>
+      <div className='title'>Photo Gallery v1.1</div>
       <div className='btn-container'>
         <button
           onClick={() => {
+            setPhotoNumber(parseInt(getRandomInt(1, 5)))
             const sort = [
               ...gallery,
               {
                 id: id,
-                image: <img src={require('./images/samo.png')} alt='Samo Pic' />
+                photoNumber: photoNumber,
+                image: (
+                  <img
+                    src={require(`./images/samo_${photoNumber}.png`)}
+                    alt='Samo Pic'
+                  />
+                )
               }
             ].sort((a, b) => {
               return b.id - a.id
@@ -49,7 +63,10 @@ export default function App() {
             <div className='photo-id-container'>
               <div className='photo-id'>{object.id + 1}</div>
             </div>
-            <img src={require('./images/samo.png')} alt='Samo Pic' />
+            <img
+              src={require(`./images/samo_${object.photoNumber}.png`)}
+              alt='Samo Pic'
+            />
           </div>
         ))}
         {savedGallery.map(object => (
@@ -58,7 +75,7 @@ export default function App() {
               <span className='photo-id'>{object.id + 1}</span>
             </div>
             <img
-              src={require('./images/samo.png')}
+              src={require(`./images/samo_${object.photoNumber}.png`)}
               alt='Samo Pic'
               style={
                 object.isLoading
