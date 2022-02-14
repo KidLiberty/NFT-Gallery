@@ -22,6 +22,7 @@ export default function App() {
 
   return (
     <div>
+      <div className='title'>Photo Gallery v1.0</div>
       <div className='btn-container'>
         <button
           onClick={() => {

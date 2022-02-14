@@ -13,21 +13,30 @@ body {
   background-color: black;
 }
 
+.title {
+  justify-content: flex-start;
+  align-items: center;
+  color: #777;
+  font-size: 1rem;
+  padding: 5px;
+  min-height: 10vh;
+}
+
 .btn-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 60vh;
   width: 100vw;
 }
 
 .btn-container button {
-  width: 250px;
-  padding: 20px;
+  width: 225px;
+  padding: 15px;
   margin: 10px;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   border: none;
   border-radius: 10000px;
   background: linear-gradient(60deg, #72169c, #56f5f5, #4bf845);
