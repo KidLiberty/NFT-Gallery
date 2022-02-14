@@ -56,6 +56,15 @@ export default function App() {
           Take Photo
         </button>
         <button onClick={() => savePhotos()}>Save Photos</button>
+        <div className='resource-link'>
+          <a
+            href='https://github.com/KidLiberty'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Resources
+          </a>
+        </div>
       </div>
       <div className='gallery'>
         {gallery.map(object => (

@@ -47,6 +47,20 @@ body {
   background: linear-gradient(60deg, #5b107e, #41d1d1, #32cc2c);
 }
 
+.resource-link a {
+  font-size: 1rem;
+  color: #277953;
+  text-decoration: none;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.resource-link a:hover {
+  font-size: 1.05rem;
+  color: #319064;
+  text-decoration: none;
+}
+
 .gallery {
   display: flex;
   justify-content: flex-start;
