@@ -47,12 +47,6 @@ body {
   background: linear-gradient(60deg, #5b107e, #41d1d1, #32cc2c);
 }
 
-img {
-  width: 100px;
-  height: 100px;
-  margin: 0px 5px;
-}
-
 .gallery {
   display: flex;
   justify-content: flex-start;
@@ -61,6 +55,17 @@ img {
   max-width: 100vw;
   overflow-x: auto;
 }
+
+.gallery img {
+  width: 100px;
+  height: 100px;
+  margin: 0px 5px;
+}
+
+.gallery:first-child {
+  margin-left: 0px;
+}
+
 .photo-container {
   font-size: 1.25rem;
   color: white;

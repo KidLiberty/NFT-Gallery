@@ -5,7 +5,7 @@ export default function App() {
   const [gallery, setGallery] = useState([])
   const [savedGallery, setSavedGallery] = useState([])
   const [id, setId] = useState(0)
-  const [photoNumber, setPhotoNumber] = useState('1')
+  const [photoNumber, setPhotoNumber] = useState(getRandomInt(1, 5))
 
   function savePhotos() {
     let newGallery = gallery.map(image => ({ ...image, isLoading: true }))
@@ -33,7 +33,7 @@ export default function App() {
       <div className='btn-container'>
         <button
           onClick={() => {
-            setPhotoNumber(parseInt(getRandomInt(1, 5)))
+            setPhotoNumber(getRandomInt(1, 5))
             const sort = [
               ...gallery,
               {
