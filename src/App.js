@@ -89,7 +89,7 @@ export default function App() {
               style={
                 object.isLoading
                   ? { border: '2px solid #fddc6d' }
-                  : { border: '2px solid #34ffaa' }
+                  : { border: '2px solid #25f09b' }
               }
             />
           </div>
