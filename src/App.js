@@ -61,8 +61,8 @@ export default function App() {
               alt='Samo Pic'
               style={
                 object.isLoading
-                  ? { border: '1px solid yellow' }
-                  : { border: '1px solid green' }
+                  ? { border: '1px solid #fddc6d' }
+                  : { border: '1px solid #34ffaa' }
               }
             />
           </div>
