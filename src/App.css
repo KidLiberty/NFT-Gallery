@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  background-color: black;
+}
+
+.btn-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 70vh;
+  width: 100vw;
+}
+
+.btn-container button {
+  width: 250px;
+  padding: 20px;
+  margin: 10px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10000px;
+  background: linear-gradient(60deg, #72169c, #56f5f5, #4bf845);
+}
+
+.btn-container button:hover {
+  cursor: pointer;
+  background: linear-gradient(60deg, #5b107e, #41d1d1, #32cc2c);
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 30vh;
+  max-width: 100vw;
+  overflow-x: auto;
+}
+.photo-container {
+  font-size: 1.25rem;
   color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.photo-id-container {
+  width: 15px;
+  position: absolute;
+  right: 45px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.photo-id {
+  display: flex;
+  justify-content: flex-end;
+  width: 50px;
 }
