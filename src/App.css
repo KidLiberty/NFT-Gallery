@@ -75,8 +75,8 @@ body {
 .photo-id-container {
   width: 15px;
   position: absolute;
-  top: 1px;
-  right: 40px;
+  top: 0px;
+  right: 44px;
 }
 
 .photo-id {
