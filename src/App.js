@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <div>
-      <div className='title'>Photo Gallery v1.1</div>
+      <div className='title'>NFT Photo Gallery v1.1</div>
       <div className='btn-container'>
         <button
           className='btn-1'
