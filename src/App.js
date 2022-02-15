@@ -32,6 +32,7 @@ export default function App() {
       <div className='title'>Photo Gallery v1.1</div>
       <div className='btn-container'>
         <button
+          className='btn-1'
           onClick={() => {
             setPhotoNumber(getRandomInt(1, 5))
             const sort = [
@@ -55,7 +56,9 @@ export default function App() {
         >
           Take Photo
         </button>
-        <button onClick={() => savePhotos()}>Save Photos</button>
+        <button className='btn-2' onClick={() => savePhotos()}>
+          Save Photos
+        </button>
         <div className='resource-link'>
           <a
             href='https://github.com/KidLiberty'

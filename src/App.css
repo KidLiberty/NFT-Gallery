@@ -31,7 +31,7 @@ body {
   width: 100vw;
 }
 
-.btn-container button {
+.btn-1 {
   width: 225px;
   padding: 15px;
   margin: 10px;
@@ -39,25 +39,41 @@ body {
   font-size: 1.35rem;
   border: none;
   border-radius: 10000px;
-  background: linear-gradient(60deg, #72169c, #56f5f5, #4bf845);
+  background: linear-gradient(220deg, #72169c, #56f5f5, #4bf845);
 }
 
-.btn-container button:hover {
+.btn-2 {
+  width: 225px;
+  padding: 15px;
+  margin: 10px;
+  font-family: inherit;
+  font-size: 1.35rem;
+  border: 2px solid white;
+  border-radius: 10000px;
+  background-color: #10ff90;
+}
+
+.btn-1:hover {
   cursor: pointer;
-  background: linear-gradient(60deg, #5b107e, #41d1d1, #32cc2c);
+  background: linear-gradient(220deg, #5b107e, #41d1d1, #32cc2c);
+}
+
+.btn-2:hover {
+  cursor: pointer;
+  background-color: #02ca6d;
 }
 
 .resource-link a {
   font-size: 1rem;
-  color: #277953;
+  color: #31865e;
   text-decoration: none;
   cursor: pointer;
   padding-bottom: 10px;
 }
 
 .resource-link a:hover {
-  font-size: 1.05rem;
-  color: #319064;
+  font-size: 1.02rem;
+  color: #4bbb87;
   text-decoration: none;
 }
 
