@@ -7,6 +7,23 @@ export default function App() {
   const [id, setId] = useState(0)
   const [photoNumber, setPhotoNumber] = useState(getRandomInt(1, 5))
 
+  const NFT = props => (
+    <div key={props.id} className='photo-container'>
+      <div className='photo-id-container'>
+        <span className='photo-id'>{props.number + 1}</span>
+      </div>
+      <img
+        src={require(`./images/samo_${props.photoNumber}.png`)}
+        alt='Samo Pic'
+        style={
+          props.isLoading
+            ? { border: '2px solid #fddc6d' }
+            : { border: '2px solid #25f09b' }
+        }
+      />
+    </div>
+  )
+
   function savePhotos() {
     let newGallery = gallery.map(image => ({ ...image, isLoading: true }))
     setSavedGallery([...newGallery, ...savedGallery])
@@ -21,6 +38,28 @@ export default function App() {
     setGallery([])
   }
 
+  function takePhoto() {
+    setPhotoNumber(getRandomInt(1, 5))
+    setGallery(
+      [
+        ...gallery,
+        {
+          id: id,
+          photoNumber: photoNumber,
+          image: (
+            <img
+              src={require(`./images/samo_${photoNumber}.png`)}
+              alt='Samo Pic'
+            />
+          )
+        }
+      ].sort((a, b) => {
+        return b.id - a.id
+      })
+    )
+    setId(id + 1)
+  }
+
   function getRandomInt(min, max) {
     min = Math.ceil(min)
     max = Math.floor(max)
@@ -31,29 +70,7 @@ export default function App() {
     <div>
       <div className='title'>NFT Photo Gallery v1.1</div>
       <div className='btn-container'>
-        <button
-          className='btn-1'
-          onClick={() => {
-            setPhotoNumber(getRandomInt(1, 5))
-            const sort = [
-              ...gallery,
-              {
-                id: id,
-                photoNumber: photoNumber,
-                image: (
-                  <img
-                    src={require(`./images/samo_${photoNumber}.png`)}
-                    alt='Samo Pic'
-                  />
-                )
-              }
-            ].sort((a, b) => {
-              return b.id - a.id
-            })
-            setGallery(sort)
-            setId(id + 1)
-          }}
-        >
+        <button className='btn-1' onClick={() => takePhoto()}>
           Take Photo
         </button>
         <button className='btn-2' onClick={() => savePhotos()}>
